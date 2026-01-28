@@ -1,3 +1,4 @@
+//Random number guesding game
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -12,14 +13,15 @@ int main() {
     randomNumber = (rand() % 100) + 1;
     int guessed_number;
     int no_of_guesses=0;
+
     do{
-        printf("Guess the number:");
+        printf("Enter the number:");
         scanf("%d",&guessed_number);
         if(guessed_number>randomNumber){
-            printf("Lower number please.\n");
+            printf("Lower the number\n");
         }
         else if(guessed_number<randomNumber){
-            printf("Higher number please.\n");
+            printf("Higher the number\n");
         }
         else{
             printf("Congrats!!\n");
@@ -27,7 +29,8 @@ int main() {
         no_of_guesses++;
     }while(guessed_number!=randomNumber);
 
-    //printf("Random number between 1 and 100: %d\n", randomNumber);
+
     printf("You guessed the number in %d guesses.\n",no_of_guesses);
+
     return 0;
 }
